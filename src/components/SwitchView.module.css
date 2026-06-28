@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 18px;
+  overflow: auto;
+  flex: 1;
+  align-content: flex-start;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-width: 360px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.cardTitle { font-size: 13px; font-weight: 700; }
+
+.stats { display: flex; gap: 10px; }
+
+.statChip {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.portsGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.port {
+  aspect-ratio: 1;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s, background 0.15s;
+  overflow: hidden;
+}
+.port:hover { border-color: var(--accent); }
+
+.active  { background: var(--surface3); }
+.blocked { background: rgba(248,81,73,.15); border-color: #f85149 !important; }
+.trunk   { border-color: #e3b341 !important; }
+
+.trafficBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: height 1s ease;
+}
+
+.portNum {
+  position: relative;
+  z-index: 1;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.activityDot {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.legend {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.vlanLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.vlanChip {
+  font-size: 10px;
+  padding: 2px 8px;
+  border: 1px solid;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
